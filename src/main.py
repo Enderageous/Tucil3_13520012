@@ -31,7 +31,7 @@ while (loop):
                 BnB.printPuzzleKurang(puzzle)
             else:
                 print("\nInput error")
-                
+        print("")
 
     kurang = BnB.kurang(puzzle)
     if (kurang%2 == 0):
