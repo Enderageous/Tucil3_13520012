@@ -2,7 +2,8 @@
 
 ## Deskripsi Program
 Program ini adalah program yang dapat menyelesaikan 15 Puzzle dari file .txt
-atau puzzle yang di randomized dengan algoritma Branch and Bound.
+atau puzzle yang di randomized dengan algoritma Branch and Bound. Untuk tile
+kosong, diberi angka 16.
 
 ## Requirement
 1. Python
@@ -12,7 +13,7 @@ atau puzzle yang di randomized dengan algoritma Branch and Bound.
 2. Cd ke /src
 3. run "py main.py"
 4. Masukan input dan tunggu hasilnya
-5. Jika ingin menambahkan file baru, masukkan file ke folder test dengan format isinya seperti test file lainnya
+5. Jika ingin menambahkan file baru, masukkan file ke folder test dengan format isinya seperti test file lainnya dengan tile kosong diberi angka 16
 
 ## Note
 Telah disediakan test file di folder test, file success dan failed.
