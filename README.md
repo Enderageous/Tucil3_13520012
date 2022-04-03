@@ -16,8 +16,8 @@ atau puzzle yang di randomized dengan algoritma Branch and Bound.
 
 ## Note
 Telah disediakan test file di folder test, file success dan failed.
-Failed akan gagal jika dijalankan.
-Success akan berhasil jika dijalankan, dengan waktu success1.txt tercepat dan success3.txt terlama dengan waktu lebih dari 2 menit.
+failed akan gagal jika dijalankan.
+success akan berhasil jika dijalankan, dengan waktu success1.txt tercepat dan success3.txt terlama dengan waktu lebih dari 2 menit.
 
 ## Pembuat
 Aji Andhika Falah   13520012

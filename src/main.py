@@ -38,7 +38,7 @@ while (loop):
         print("Loading...\n")
         BnB.solve(puzzle)
     else:
-        print("\nPuzzle tidak bisa diselesaikan\n")
+        print("\nPuzzle cannot be solved\n")
 
     option3 = input("Want to do another? (Y/N): ")
     repeat = True
