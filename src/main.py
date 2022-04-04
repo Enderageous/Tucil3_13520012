@@ -5,6 +5,7 @@ loop = True
 
 while (loop):
     puzzle = []
+    kurang = 1
 
     option = input("Read File or Randomized?\n(1) Read File\n(2) Randomized\nInput: ")
     print("")
@@ -15,12 +16,12 @@ while (loop):
     if (int(option) == 1):
         puzzle = BnB.readFile()
 
-        BnB.printPuzzleKurang(puzzle)
+        kurang = BnB.printPuzzleKurang(puzzle)
     
     elif (int(option) == 2):
         repeat = True
         puzzle = BnB.randomPuzzle()
-        BnB.printPuzzleKurang(puzzle)
+        kurang = BnB.printPuzzleKurang(puzzle)
 
         while (repeat):
             option2 = input("Is this okay? (Y/N): ")
@@ -28,12 +29,11 @@ while (loop):
                 repeat = False
             elif (option2 == "N" or option2 == "n"):
                 puzzle = BnB.randomPuzzle()
-                BnB.printPuzzleKurang(puzzle)
+                kurang = BnB.printPuzzleKurang(puzzle)
             else:
                 print("\nInput error")
         print("")
 
-    kurang = BnB.kurang(puzzle)
     if (kurang%2 == 0):
         print("Loading...\n")
         BnB.solve(puzzle)

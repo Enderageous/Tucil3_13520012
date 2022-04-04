@@ -85,10 +85,13 @@ def randomPuzzle():
 # Function that counts KURANG(i) + X
 def kurang(puzzle) :
     kurang = 0
+    before = 0
+    print("KURANG(i):")
     for e in range(1, len(puzzle) * len(puzzle[0]) + 1):
         found = False
-        ii=0
-        jj=0
+        grid = False
+        ii = 0
+        jj = 0
         while (ii < len(puzzle) and not found):
             jj=0
             while (jj < len(puzzle[0]) and not found):
@@ -104,18 +107,28 @@ def kurang(puzzle) :
                     kurang += 1
                 if (e == 16 and puzzle[i][j] == 16 and ((i%2 == 1 and j%2 == 0) or (i%2 == 0 and j%2 == 1))):
                     kurang += 1
+                    grid = True
+        if (grid):
+            print("Tile " + str(e) + ": " + str(kurang - before - 1))
+            before = kurang
+        else:
+            print("Tile " + str(e) + ": " + str(kurang - before))
+            before = kurang
     
     return kurang
 
-# Procedure that prints out the puzzle and KURANG(i) + X
+# Function that prints out the puzzle and KURANG(i) + X
 def printPuzzleKurang(puzzle):
 
     print("Puzzle:")
     x = '\n'.join([''.join(['{:4}'.format(element) for element in row]) for row in puzzle])
     print(x)
 
+    print("")
     nkurang = kurang(puzzle)
     print("\nKURANG(i) + X =", nkurang,"\n")
+
+    return nkurang
 
 
 # Function that counts how many tiles are not in the correct places
